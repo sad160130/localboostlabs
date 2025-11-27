@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Enable CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -14,8 +14,16 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // Check if environment variables are set
+  if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+    console.error('Missing environment variables: GMAIL_USER or GMAIL_APP_PASSWORD');
+    return res.status(500).json({ error: 'Server configuration error' });
+  }
+
   try {
-    const { name, email, phone, business, city, description, source } = req.body;
+    const { name, email, phone, business, city, description, source } = req.body || {};
+
+    console.log('Received form submission:', { name, email, phone, business, city, source });
 
     // Create transporter using Gmail SMTP
     const transporter = nodemailer.createTransport({
@@ -25,6 +33,10 @@ export default async function handler(req, res) {
         pass: process.env.GMAIL_APP_PASSWORD
       }
     });
+
+    // Verify transporter connection
+    await transporter.verify();
+    console.log('SMTP connection verified');
 
     // Email content
     const mailOptions = {
@@ -68,12 +80,17 @@ export default async function handler(req, res) {
     };
 
     // Send email
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent successfully:', info.messageId);
 
     // Redirect to thank you page
     res.redirect(302, '/thank-you.html');
   } catch (error) {
-    console.error('Email error:', error);
-    res.status(500).json({ error: 'Failed to send email. Please try again.' });
+    console.error('Email error:', error.message);
+    console.error('Full error:', error);
+    res.status(500).json({
+      error: 'Failed to send email',
+      details: error.message
+    });
   }
-}
+};
