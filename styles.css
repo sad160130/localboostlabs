@@ -2957,6 +2957,292 @@ p {
   font-weight: 500;
 }
 
+/* ===================================
+   Geo-Grid Ranking Visualization
+   Local Falcon / Rankings.io Style
+   =================================== */
+
+.geo-grid-container {
+  padding: 1.5rem;
+}
+
+.geo-grid-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.geo-grid-title {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.geo-grid-subtitle {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.geo-grid-map {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 1;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.geo-grid-map .map-background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.geo-grid-map .map-streets {
+  width: 100%;
+  height: 100%;
+}
+
+.geo-grid-map.before .map-background svg rect {
+  fill: #f3e8e8;
+}
+
+.geo-grid-map.after .map-background svg rect {
+  fill: #e8f4e8;
+}
+
+/* Pin Grid - 7x7 layout */
+.pin-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  padding: 12px;
+  height: 100%;
+}
+
+.rank-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: var(--transition-fast);
+  cursor: default;
+}
+
+.rank-pin:hover {
+  transform: scale(1.15);
+  z-index: 10;
+}
+
+/* Pin Colors based on ranking position */
+.rank-pin.green {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.5);
+}
+
+.rank-pin.yellow {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.5);
+}
+
+.rank-pin.orange {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.5);
+}
+
+.rank-pin.red {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.5);
+}
+
+/* Center pin (business location) */
+.rank-pin.center-pin {
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px currentColor, 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: pulse-ring 2s infinite;
+}
+
+.before .rank-pin.center-pin {
+  box-shadow: 0 0 0 2px #f59e0b, 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.after .rank-pin.center-pin {
+  box-shadow: 0 0 0 2px #10b981, 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 2px currentColor, 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 4px currentColor, 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 2px currentColor, 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Business Marker (optional overlay) */
+.business-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  pointer-events: none;
+  display: none; /* Hidden since we use center-pin styling */
+}
+
+/* Geo Grid Legend */
+.geo-grid-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: var(--radius-md);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.legend-color.green {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.legend-color.yellow {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.legend-color.orange {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+.legend-color.red {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* Geo Grid Stats */
+.geo-grid-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: var(--radius-md);
+}
+
+.geo-grid-stats.bad {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border: 1px solid #fecaca;
+}
+
+.geo-grid-stats.good {
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+  border: 1px solid #a7f3d0;
+}
+
+.grid-stat {
+  text-align: center;
+}
+
+.grid-stat-value {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.geo-grid-stats.bad .grid-stat-value {
+  color: #dc2626;
+}
+
+.geo-grid-stats.good .grid-stat-value {
+  color: #059669;
+}
+
+.grid-stat-label {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--text-light);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Responsive Geo Grid */
+@media (max-width: 768px) {
+  .geo-grid-map {
+    max-width: 280px;
+  }
+
+  .pin-grid {
+    gap: 3px;
+    padding: 8px;
+  }
+
+  .rank-pin {
+    font-size: 0.55rem;
+  }
+
+  .geo-grid-legend {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .legend-item {
+    font-size: 0.65rem;
+  }
+
+  .grid-stat-value {
+    font-size: 1rem;
+  }
+
+  .grid-stat-label {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .geo-grid-map {
+    max-width: 240px;
+  }
+
+  .rank-pin {
+    font-size: 0.5rem;
+  }
+
+  .geo-grid-stats {
+    padding: 0.75rem;
+  }
+}
+
 /* Responsive for Before/After */
 @media (max-width: 1024px) {
   .before-after-container {

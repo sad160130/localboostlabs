@@ -336,7 +336,7 @@
     <div class="container">
       <div class="section-header">
         <h2>The Google Map Pack Transformation</h2>
-        <p>See the dramatic difference between an unoptimized and fully optimized Google Business Profile</p>
+        <p>See the dramatic difference in local ranking visibility before and after GBP optimization across your entire service area</p>
       </div>
 
       <div class="before-after-container">
@@ -347,85 +347,130 @@
             <span>BEFORE Optimization</span>
           </div>
 
-          <!-- Mock Google Search Result -->
-          <div class="mock-google-search">
-            <div class="mock-search-bar">
-              <div class="mock-search-icon">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="#9ca3af"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-              </div>
-              <span>AC repair Lancaster SC</span>
+          <!-- Geo Grid Map Visualization -->
+          <div class="geo-grid-container">
+            <div class="geo-grid-header">
+              <span class="geo-grid-title">Local Rank Grid: "HVAC Repair Lancaster SC"</span>
+              <span class="geo-grid-subtitle">5-mile radius from business location</span>
             </div>
 
-            <div class="mock-map-pack">
-              <div class="mock-map">
-                <svg viewBox="0 0 100 60" class="map-svg">
-                  <rect fill="#e5e7eb" width="100" height="60"/>
-                  <circle cx="30" cy="25" r="4" fill="#ea4335"/>
-                  <circle cx="55" cy="35" r="4" fill="#ea4335"/>
-                  <circle cx="70" cy="20" r="4" fill="#ea4335"/>
-                  <path d="M10 45 Q30 30 50 40 T90 35" stroke="#9ca3af" stroke-width="1" fill="none"/>
+            <div class="geo-grid-map before">
+              <!-- Map Background with Streets -->
+              <div class="map-background">
+                <svg viewBox="0 0 300 300" class="map-streets">
+                  <rect fill="#e8f4e8" width="300" height="300"/>
+                  <!-- Roads -->
+                  <path d="M0 150 L300 150" stroke="#fff" stroke-width="8" opacity="0.7"/>
+                  <path d="M150 0 L150 300" stroke="#fff" stroke-width="8" opacity="0.7"/>
+                  <path d="M0 75 L300 75" stroke="#fff" stroke-width="4" opacity="0.5"/>
+                  <path d="M0 225 L300 225" stroke="#fff" stroke-width="4" opacity="0.5"/>
+                  <path d="M75 0 L75 300" stroke="#fff" stroke-width="4" opacity="0.5"/>
+                  <path d="M225 0 L225 300" stroke="#fff" stroke-width="4" opacity="0.5"/>
+                  <!-- Water feature -->
+                  <ellipse cx="240" cy="60" rx="50" ry="30" fill="#b3d9ff" opacity="0.5"/>
                 </svg>
               </div>
 
-              <div class="mock-listings">
-                <div class="mock-listing competitor">
-                  <div class="listing-rank">1</div>
-                  <div class="listing-info">
-                    <div class="listing-name">Competitor HVAC Co.</div>
-                    <div class="listing-rating">
-                      <span class="stars">★★★★☆</span>
-                      <span class="count">(127)</span>
-                    </div>
-                    <div class="listing-meta">HVAC contractor</div>
-                  </div>
-                </div>
-                <div class="mock-listing competitor">
-                  <div class="listing-rank">2</div>
-                  <div class="listing-info">
-                    <div class="listing-name">Another HVAC Company</div>
-                    <div class="listing-rating">
-                      <span class="stars">★★★★★</span>
-                      <span class="count">(89)</span>
-                    </div>
-                    <div class="listing-meta">Air conditioning repair</div>
-                  </div>
-                </div>
-                <div class="mock-listing competitor">
-                  <div class="listing-rank">3</div>
-                  <div class="listing-info">
-                    <div class="listing-name">Third Competitor Inc.</div>
-                    <div class="listing-rating">
-                      <span class="stars">★★★★☆</span>
-                      <span class="count">(65)</span>
-                    </div>
-                    <div class="listing-meta">Heating contractor</div>
-                  </div>
-                </div>
+              <!-- Pin Grid - 7x7 grid of ranking pins -->
+              <div class="pin-grid">
+                <!-- Row 1 -->
+                <div class="rank-pin red" data-rank="20+">20+</div>
+                <div class="rank-pin red" data-rank="18">18</div>
+                <div class="rank-pin red" data-rank="15">15</div>
+                <div class="rank-pin red" data-rank="12">12</div>
+                <div class="rank-pin red" data-rank="14">14</div>
+                <div class="rank-pin red" data-rank="17">17</div>
+                <div class="rank-pin red" data-rank="20+">20+</div>
+                <!-- Row 2 -->
+                <div class="rank-pin red" data-rank="16">16</div>
+                <div class="rank-pin red" data-rank="12">12</div>
+                <div class="rank-pin orange" data-rank="9">9</div>
+                <div class="rank-pin orange" data-rank="8">8</div>
+                <div class="rank-pin orange" data-rank="10">10</div>
+                <div class="rank-pin red" data-rank="13">13</div>
+                <div class="rank-pin red" data-rank="18">18</div>
+                <!-- Row 3 -->
+                <div class="rank-pin red" data-rank="14">14</div>
+                <div class="rank-pin orange" data-rank="8">8</div>
+                <div class="rank-pin orange" data-rank="6">6</div>
+                <div class="rank-pin orange" data-rank="5">5</div>
+                <div class="rank-pin orange" data-rank="7">7</div>
+                <div class="rank-pin orange" data-rank="9">9</div>
+                <div class="rank-pin red" data-rank="15">15</div>
+                <!-- Row 4 - Center row with business location -->
+                <div class="rank-pin red" data-rank="11">11</div>
+                <div class="rank-pin orange" data-rank="6">6</div>
+                <div class="rank-pin orange" data-rank="4">4</div>
+                <div class="rank-pin yellow center-pin" data-rank="4">4</div>
+                <div class="rank-pin orange" data-rank="5">5</div>
+                <div class="rank-pin orange" data-rank="8">8</div>
+                <div class="rank-pin red" data-rank="12">12</div>
+                <!-- Row 5 -->
+                <div class="rank-pin red" data-rank="13">13</div>
+                <div class="rank-pin orange" data-rank="9">9</div>
+                <div class="rank-pin orange" data-rank="7">7</div>
+                <div class="rank-pin orange" data-rank="6">6</div>
+                <div class="rank-pin orange" data-rank="8">8</div>
+                <div class="rank-pin orange" data-rank="10">10</div>
+                <div class="rank-pin red" data-rank="14">14</div>
+                <!-- Row 6 -->
+                <div class="rank-pin red" data-rank="17">17</div>
+                <div class="rank-pin red" data-rank="11">11</div>
+                <div class="rank-pin orange" data-rank="10">10</div>
+                <div class="rank-pin orange" data-rank="9">9</div>
+                <div class="rank-pin red" data-rank="11">11</div>
+                <div class="rank-pin red" data-rank="13">13</div>
+                <div class="rank-pin red" data-rank="19">19</div>
+                <!-- Row 7 -->
+                <div class="rank-pin red" data-rank="20+">20+</div>
+                <div class="rank-pin red" data-rank="16">16</div>
+                <div class="rank-pin red" data-rank="14">14</div>
+                <div class="rank-pin red" data-rank="12">12</div>
+                <div class="rank-pin red" data-rank="15">15</div>
+                <div class="rank-pin red" data-rank="18">18</div>
+                <div class="rank-pin red" data-rank="20+">20+</div>
+              </div>
+
+              <!-- Business Location Marker -->
+              <div class="business-marker before-marker">
+                <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#6b7280" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="3" fill="#fff"/></svg>
               </div>
             </div>
 
-            <div class="your-position not-visible">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-              <span>Your Business: Not visible (Page 2+)</span>
+            <!-- Legend -->
+            <div class="geo-grid-legend">
+              <div class="legend-item">
+                <span class="legend-color green"></span>
+                <span>Rank 1-3</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color yellow"></span>
+                <span>Rank 4-5</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color orange"></span>
+                <span>Rank 6-10</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color red"></span>
+                <span>Rank 11+</span>
+              </div>
             </div>
-          </div>
 
-          <div class="comparison-stats bad-stats">
-            <div class="stat-row">
-              <span class="stat-label">Map Pack Position</span>
-              <span class="stat-value bad">Not Ranking</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-label">Monthly Profile Views</span>
-              <span class="stat-value bad">~150</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-label">Calls from GBP</span>
-              <span class="stat-value bad">5-10/month</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-label">Reviews</span>
-              <span class="stat-value bad">23 reviews (3.8★)</span>
+            <!-- Stats Summary -->
+            <div class="geo-grid-stats bad">
+              <div class="grid-stat">
+                <span class="grid-stat-value">0%</span>
+                <span class="grid-stat-label">Top 3 Rankings</span>
+              </div>
+              <div class="grid-stat">
+                <span class="grid-stat-value">8.7</span>
+                <span class="grid-stat-label">Avg. Position</span>
+              </div>
+              <div class="grid-stat">
+                <span class="grid-stat-value">2%</span>
+                <span class="grid-stat-label">Visibility Score</span>
+              </div>
             </div>
           </div>
         </div>
@@ -446,89 +491,130 @@
             <span>AFTER Optimization</span>
           </div>
 
-          <!-- Mock Google Search Result -->
-          <div class="mock-google-search">
-            <div class="mock-search-bar">
-              <div class="mock-search-icon">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="#9ca3af"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-              </div>
-              <span>AC repair Lancaster SC</span>
+          <!-- Geo Grid Map Visualization -->
+          <div class="geo-grid-container">
+            <div class="geo-grid-header">
+              <span class="geo-grid-title">Local Rank Grid: "HVAC Repair Lancaster SC"</span>
+              <span class="geo-grid-subtitle">5-mile radius from business location</span>
             </div>
 
-            <div class="mock-map-pack">
-              <div class="mock-map">
-                <svg viewBox="0 0 100 60" class="map-svg">
-                  <rect fill="#e5e7eb" width="100" height="60"/>
-                  <circle cx="50" cy="30" r="6" fill="#f97316" stroke="#fff" stroke-width="2"/>
-                  <circle cx="30" cy="40" r="4" fill="#ea4335"/>
-                  <circle cx="70" cy="25" r="4" fill="#ea4335"/>
-                  <path d="M10 45 Q30 30 50 40 T90 35" stroke="#9ca3af" stroke-width="1" fill="none"/>
+            <div class="geo-grid-map after">
+              <!-- Map Background with Streets -->
+              <div class="map-background">
+                <svg viewBox="0 0 300 300" class="map-streets">
+                  <rect fill="#e8f4e8" width="300" height="300"/>
+                  <!-- Roads -->
+                  <path d="M0 150 L300 150" stroke="#fff" stroke-width="8" opacity="0.7"/>
+                  <path d="M150 0 L150 300" stroke="#fff" stroke-width="8" opacity="0.7"/>
+                  <path d="M0 75 L300 75" stroke="#fff" stroke-width="4" opacity="0.5"/>
+                  <path d="M0 225 L300 225" stroke="#fff" stroke-width="4" opacity="0.5"/>
+                  <path d="M75 0 L75 300" stroke="#fff" stroke-width="4" opacity="0.5"/>
+                  <path d="M225 0 L225 300" stroke="#fff" stroke-width="4" opacity="0.5"/>
+                  <!-- Water feature -->
+                  <ellipse cx="240" cy="60" rx="50" ry="30" fill="#b3d9ff" opacity="0.5"/>
                 </svg>
               </div>
 
-              <div class="mock-listings">
-                <div class="mock-listing highlighted">
-                  <div class="listing-rank winner">1</div>
-                  <div class="listing-info">
-                    <div class="listing-name highlight">Your HVAC Company</div>
-                    <div class="listing-rating">
-                      <span class="stars gold">★★★★★</span>
-                      <span class="count">(156)</span>
-                    </div>
-                    <div class="listing-meta">HVAC contractor · Open 24 hours</div>
-                    <div class="listing-extras">
-                      <span class="extra-badge">Verified</span>
-                      <span class="extra-badge">Licensed</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="mock-listing competitor">
-                  <div class="listing-rank">2</div>
-                  <div class="listing-info">
-                    <div class="listing-name">Competitor HVAC Co.</div>
-                    <div class="listing-rating">
-                      <span class="stars">★★★★☆</span>
-                      <span class="count">(127)</span>
-                    </div>
-                    <div class="listing-meta">HVAC contractor</div>
-                  </div>
-                </div>
-                <div class="mock-listing competitor">
-                  <div class="listing-rank">3</div>
-                  <div class="listing-info">
-                    <div class="listing-name">Another HVAC Company</div>
-                    <div class="listing-rating">
-                      <span class="stars">★★★★★</span>
-                      <span class="count">(89)</span>
-                    </div>
-                    <div class="listing-meta">Air conditioning repair</div>
-                  </div>
-                </div>
+              <!-- Pin Grid - 7x7 grid of ranking pins -->
+              <div class="pin-grid">
+                <!-- Row 1 -->
+                <div class="rank-pin orange" data-rank="7">7</div>
+                <div class="rank-pin orange" data-rank="6">6</div>
+                <div class="rank-pin yellow" data-rank="4">4</div>
+                <div class="rank-pin green" data-rank="3">3</div>
+                <div class="rank-pin yellow" data-rank="5">5</div>
+                <div class="rank-pin orange" data-rank="6">6</div>
+                <div class="rank-pin orange" data-rank="8">8</div>
+                <!-- Row 2 -->
+                <div class="rank-pin orange" data-rank="6">6</div>
+                <div class="rank-pin yellow" data-rank="4">4</div>
+                <div class="rank-pin green" data-rank="2">2</div>
+                <div class="rank-pin green" data-rank="1">1</div>
+                <div class="rank-pin green" data-rank="2">2</div>
+                <div class="rank-pin yellow" data-rank="4">4</div>
+                <div class="rank-pin orange" data-rank="6">6</div>
+                <!-- Row 3 -->
+                <div class="rank-pin yellow" data-rank="5">5</div>
+                <div class="rank-pin green" data-rank="3">3</div>
+                <div class="rank-pin green" data-rank="1">1</div>
+                <div class="rank-pin green" data-rank="1">1</div>
+                <div class="rank-pin green" data-rank="1">1</div>
+                <div class="rank-pin green" data-rank="2">2</div>
+                <div class="rank-pin yellow" data-rank="5">5</div>
+                <!-- Row 4 - Center row with business location -->
+                <div class="rank-pin green" data-rank="3">3</div>
+                <div class="rank-pin green" data-rank="1">1</div>
+                <div class="rank-pin green" data-rank="1">1</div>
+                <div class="rank-pin green center-pin" data-rank="1">1</div>
+                <div class="rank-pin green" data-rank="1">1</div>
+                <div class="rank-pin green" data-rank="1">1</div>
+                <div class="rank-pin green" data-rank="3">3</div>
+                <!-- Row 5 -->
+                <div class="rank-pin yellow" data-rank="4">4</div>
+                <div class="rank-pin green" data-rank="2">2</div>
+                <div class="rank-pin green" data-rank="1">1</div>
+                <div class="rank-pin green" data-rank="1">1</div>
+                <div class="rank-pin green" data-rank="1">1</div>
+                <div class="rank-pin green" data-rank="2">2</div>
+                <div class="rank-pin yellow" data-rank="4">4</div>
+                <!-- Row 6 -->
+                <div class="rank-pin orange" data-rank="6">6</div>
+                <div class="rank-pin yellow" data-rank="4">4</div>
+                <div class="rank-pin green" data-rank="2">2</div>
+                <div class="rank-pin green" data-rank="2">2</div>
+                <div class="rank-pin green" data-rank="3">3</div>
+                <div class="rank-pin yellow" data-rank="5">5</div>
+                <div class="rank-pin orange" data-rank="7">7</div>
+                <!-- Row 7 -->
+                <div class="rank-pin orange" data-rank="8">8</div>
+                <div class="rank-pin orange" data-rank="6">6</div>
+                <div class="rank-pin yellow" data-rank="5">5</div>
+                <div class="rank-pin yellow" data-rank="4">4</div>
+                <div class="rank-pin yellow" data-rank="5">5</div>
+                <div class="rank-pin orange" data-rank="7">7</div>
+                <div class="rank-pin orange" data-rank="9">9</div>
+              </div>
+
+              <!-- Business Location Marker -->
+              <div class="business-marker after-marker">
+                <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#10b981" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="3" fill="#fff"/></svg>
               </div>
             </div>
 
-            <div class="your-position visible">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-              <span>Your Business: #1 in Map Pack!</span>
+            <!-- Legend -->
+            <div class="geo-grid-legend">
+              <div class="legend-item">
+                <span class="legend-color green"></span>
+                <span>Rank 1-3</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color yellow"></span>
+                <span>Rank 4-5</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color orange"></span>
+                <span>Rank 6-10</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color red"></span>
+                <span>Rank 11+</span>
+              </div>
             </div>
-          </div>
 
-          <div class="comparison-stats good-stats">
-            <div class="stat-row">
-              <span class="stat-label">Map Pack Position</span>
-              <span class="stat-value good">#1 Ranking</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-label">Monthly Profile Views</span>
-              <span class="stat-value good">~2,400 <span class="increase">↑ 1,500%</span></span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-label">Calls from GBP</span>
-              <span class="stat-value good">45-60/month <span class="increase">↑ 500%</span></span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-label">Reviews</span>
-              <span class="stat-value good">156 reviews (4.9★)</span>
+            <!-- Stats Summary -->
+            <div class="geo-grid-stats good">
+              <div class="grid-stat">
+                <span class="grid-stat-value">71%</span>
+                <span class="grid-stat-label">Top 3 Rankings</span>
+              </div>
+              <div class="grid-stat">
+                <span class="grid-stat-value">2.3</span>
+                <span class="grid-stat-label">Avg. Position</span>
+              </div>
+              <div class="grid-stat">
+                <span class="grid-stat-value">94%</span>
+                <span class="grid-stat-label">Visibility Score</span>
+              </div>
             </div>
           </div>
         </div>
