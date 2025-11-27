@@ -158,9 +158,8 @@
         <div class="contact-form-wrapper lead-form-wrapper" id="lead-form">
           <h3>Get Your Free Local SEO Strategy</h3>
           <p class="form-subtitle">Tell us about your HVAC business</p>
-          <form class="lead-form" action="https://formsubmit.co/kadamrohan1988@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New Lead from Local Boost Labs - Contact Page">
-            <input type="hidden" name="_next" value="https://localboostlabs.vercel.app/thank-you.html">
+          <form class="lead-form" action="/api/contact" method="POST">
+            <input type="hidden" name="source" value="Contact Page">
             <div class="form-group">
               <label for="name">Name *</label>
               <input type="text" id="name" name="name" required placeholder="Your full name">
