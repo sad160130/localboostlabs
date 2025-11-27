@@ -2095,6 +2095,22 @@ p {
   color: var(--text-white);
 }
 
+.founder-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 4px solid var(--bg-white);
+}
+
+.founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .founder-credentials {
   display: flex;
   flex-direction: column;
@@ -2622,6 +2638,11 @@ p {
   }
 
   .founder-photo-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+
+  .founder-photo {
     width: 150px;
     height: 150px;
   }
