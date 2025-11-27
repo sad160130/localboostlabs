@@ -113,9 +113,8 @@
         const isValid = validateForm(form);
 
         if (isValid) {
-          // Show success message
-          showFormSuccess(form);
-          form.reset();
+          // Actually submit the form to the API
+          form.submit();
         }
       });
 
