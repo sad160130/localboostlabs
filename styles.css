@@ -499,20 +499,107 @@ p {
 .trust-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.25rem;
   margin-top: 2.5rem;
 }
 
 .trust-badge {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius-md);
-  font-size: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 0.875rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.trust-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(251, 191, 36, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.trust-badge:hover::before {
+  opacity: 1;
+}
+
+.trust-badge:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(249, 115, 22, 0.5);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.15),
+    0 0 20px rgba(249, 115, 22, 0.2);
+}
+
+.trust-badge-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #ea580c 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow:
+    0 6px 16px rgba(249, 115, 22, 0.4),
+    0 0 0 3px rgba(249, 115, 22, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.trust-badge-icon::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), transparent);
+  border-radius: 10px 10px 50% 50%;
+}
+
+.trust-badge-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: white;
+  position: relative;
+  z-index: 1;
+}
+
+.trust-badge-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  position: relative;
+  z-index: 1;
+}
+
+.trust-badge-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.trust-badge-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
 }
 
 .trust-badge svg {
