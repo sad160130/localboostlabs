@@ -5524,3 +5524,417 @@ p {
 .legal-contact p:last-child {
   margin-bottom: 0;
 }
+
+/* =========================================
+   E-E-A-T Authority Section Styles
+   ========================================= */
+
+/* E-E-A-T Section */
+.eeat-section {
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg-light) 100%);
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+  padding: 0.375rem 1rem;
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: var(--radius-full);
+}
+
+/* Expertise Grid */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.expertise-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.expertise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(249, 115, 22, 0.3);
+}
+
+.expertise-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border-radius: var(--radius-md);
+}
+
+.expertise-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--text-white);
+}
+
+.expertise-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+}
+
+.expertise-content p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.expertise-credential {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.credential-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  background: rgba(30, 64, 175, 0.1);
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(30, 64, 175, 0.2);
+}
+
+/* Research Section */
+.research-section {
+  background: linear-gradient(135deg, var(--primary-dark), var(--bg-dark));
+  padding: 3rem;
+  border-radius: var(--radius-xl);
+  margin-bottom: 4rem;
+}
+
+.research-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.research-header h3 {
+  color: var(--text-white);
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.research-header p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.research-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.research-stat {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.research-stat:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+}
+
+.research-stat-value {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--secondary-color);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.research-stat-label {
+  display: block;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.research-stat-source {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+/* Commitment Grid */
+.commitment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.commitment-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.commitment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.commitment-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+  border-radius: 50%;
+}
+
+.commitment-icon svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--accent-color);
+}
+
+.commitment-card h4 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+}
+
+.commitment-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* =========================================
+   Methodology Section Styles
+   ========================================= */
+
+.methodology-section {
+  background: var(--bg-light);
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.methodology-pillar {
+  background: var(--bg-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.methodology-pillar:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.pillar-header {
+  padding: 1.75rem 2rem 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  position: relative;
+}
+
+.pillar-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.pillar-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--text-white);
+}
+
+.pillar-number {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.pillar-header h3 {
+  color: var(--text-white);
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.pillar-content {
+  padding: 1.75rem 2rem 2rem;
+}
+
+.pillar-content > p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.pillar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pillar-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.pillar-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+  border-radius: 50%;
+}
+
+.methodology-footer {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.08), rgba(249, 115, 22, 0.03));
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+}
+
+.methodology-footer p {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* =========================================
+   E-E-A-T Responsive Styles
+   ========================================= */
+
+@media (max-width: 1024px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .expertise-icon {
+    margin: 0 auto;
+  }
+
+  .expertise-credential {
+    justify-content: center;
+  }
+
+  .research-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .commitment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .research-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .research-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .research-stat-value {
+    font-size: 2.5rem;
+  }
+
+  .commitment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-header {
+    padding: 1.5rem;
+  }
+
+  .pillar-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .expertise-card {
+    padding: 1.5rem;
+  }
+
+  .research-stat-value {
+    font-size: 2rem;
+  }
+
+  .commitment-card {
+    padding: 1.5rem 1rem;
+  }
+}
