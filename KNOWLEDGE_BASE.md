@@ -37,7 +37,7 @@ their new website**.
 | Email | snket.desai@easylocalboostlabs.com |
 | Address | 5508 Soft Shell Drive, Lancaster, SC 29720 |
 | Founder | Matt Heinecke |
-| Technical / SEO | Sanket Desai |
+| Technical / SEO | Snket Desai |
 
 **Target industries:** Kitchen & bath remodelers (primary), home builders /
 general contractors, roofing/siding/window contractors, landscapers &
