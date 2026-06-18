@@ -34,7 +34,7 @@ their new website**.
 | Business name | Local Boost Labs |
 | What it sells | AI-built websites + $99/mo hosting & care for skilled trades |
 | Phone | **(502) 530-9330** |
-| Email | info@localboostlabs.com |
+| Email | snket.desai@easylocalboostlabs.com |
 | Address | 5508 Soft Shell Drive, Lancaster, SC 29720 |
 | Founder | Matt Heinecke |
 | Technical / SEO | Sanket Desai |
@@ -191,7 +191,7 @@ industries grid, what's-included ($99/mo), trust stats, FAQ, final CTA.
   the sitemap.
 - **Internal linking:** Services ↔ industries ↔ homepage cross-link heavily.
 - **NAP consistency:** 5508 Soft Shell Drive, Lancaster, SC 29720 +
-  (502) 530-9330 + info@localboostlabs.com in footer/schema on every page.
+  (502) 530-9330 + snket.desai@easylocalboostlabs.com in footer/schema on every page.
 
 ---
 
@@ -247,11 +247,14 @@ Vanilla JS, IIFE-wrapped, initialized on `DOMContentLoaded`:
 4. CORS is open (`*`); only `POST`/`OPTIONS` accepted.
 
 **Required environment variables:**
-- `GMAIL_USER` — the Gmail address used to send (appears in `From`).
-- `GMAIL_APP_PASSWORD` — a Gmail App Password (not the account password).
+- `GMAIL_USER` — the Gmail / Google Workspace address used to send (also the
+  `From` address). Set this to **`snket.desai@easylocalboostlabs.com`** so
+  notifications send from that mailbox. Must be a Gmail/Workspace account.
+- `GMAIL_APP_PASSWORD` — an App Password generated for the `GMAIL_USER`
+  account (not the normal login password). Must belong to the same account
+  set in `GMAIL_USER`.
 - `LEAD_TO_EMAIL` — where lead notifications are delivered (optional;
-  defaults to `snket.desai@easylocalboostlabs.com` if unset). This is an
-  internal routing address only and is **not** shown anywhere on the site.
+  defaults to `snket.desai@easylocalboostlabs.com` if unset).
 
 ---
 
@@ -289,7 +292,7 @@ compatible runtime (e.g. `vercel dev`) with the Gmail env vars set.
 5. Write body copy in the contractor-to-contractor voice (§6); respect the
    trust guardrails (§2) — no fabricated proof.
 6. Keep NAP consistent: 5508 Soft Shell Drive, Lancaster, SC 29720 /
-   (502) 530-9330 / info@localboostlabs.com.
+   (502) 530-9330 / snket.desai@easylocalboostlabs.com.
 7. Add the URL to `sitemap.xml`.
 8. Add internal links + nav/footer entries.
 9. Set the lead form's hidden `source` to the new page name.
