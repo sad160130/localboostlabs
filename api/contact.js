@@ -26,6 +26,9 @@ module.exports = async function handler(req, res) {
     // "trade" is the new field; fall back to legacy "city" if present
     const tradeOrCity = trade || city;
 
+    // Lead-notification recipient (override via env, default to founder inbox)
+    const leadToEmail = process.env.LEAD_TO_EMAIL || 'snket.desai@easylocalboostlabs.com';
+
     console.log('Received form submission:', { name, email, phone, business, trade: tradeOrCity, website, source });
 
     // Create transporter using Gmail SMTP
@@ -52,11 +55,38 @@ module.exports = async function handler(req, res) {
       timeZoneName: 'short'
     });
 
+    // Plain-text fallback (for clients that don't render HTML)
+    const textBody = [
+      'NEW LEAD SUBMISSION',
+      '====================',
+      '',
+      `Submitted: ${submittedAt}`,
+      `Source:    ${source || 'Not specified'}`,
+      '',
+      'CONTACT INFORMATION',
+      '-------------------',
+      `Name:           ${name || 'Not provided'}`,
+      `Email:          ${email || 'Not provided'}`,
+      `Phone:          ${phone || 'Not provided'}`,
+      `Business Name:  ${business || 'Not provided'}`,
+      `Trade:          ${tradeOrCity || 'Not provided'}`,
+      `Current Website: ${website || 'Not provided'}`,
+      '',
+      'PROJECT DESCRIPTION',
+      '-------------------',
+      `${description || 'No description provided'}`,
+      '',
+      '---',
+      'This lead was submitted from localboostlabs.com'
+    ].join('\n');
+
     // Email content
     const mailOptions = {
-      from: process.env.GMAIL_USER,
-      to: 'info@localboostlabs.com',
-      subject: `New Lead: ${business || name || 'Website Inquiry'} - ${tradeOrCity || 'Local Boost Labs'}`,
+      from: `"Local Boost Labs" <${process.env.GMAIL_USER}>`,
+      to: leadToEmail,
+      replyTo: email || undefined,
+      subject: `New Lead: ${business || name || 'Website Inquiry'} — ${tradeOrCity || 'Local Boost Labs'}`,
+      text: textBody,
       html: `
         <!DOCTYPE html>
         <html>

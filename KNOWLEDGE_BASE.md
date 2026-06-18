@@ -75,7 +75,7 @@ Browser ──► static HTML/CSS/JS (served from repo root)
    │
    └── form POST ──► /api/contact (Nodemailer → Gmail SMTP)
                           │
-                          ├── sends formatted lead email to info@localboostlabs.com
+                          ├── sends lead email (HTML + text) to LEAD_TO_EMAIL
                           └── 302 redirect ──► /thank-you.html
 ```
 
@@ -238,14 +238,20 @@ Vanilla JS, IIFE-wrapped, initialized on `DOMContentLoaded`:
    `description`, and a hidden `source` (identifies the originating page).
    *(Legacy `city` field still accepted for backward compatibility.)*
 2. The handler validates env vars, creates a Nodemailer Gmail transport,
-   verifies the connection, and sends a styled HTML email to
-   **info@localboostlabs.com** (subject: `New Lead: {business} - {trade}`).
+   verifies the connection, and sends a lead notification (styled HTML +
+   plain-text fallback) to the recipient defined by `LEAD_TO_EMAIL`
+   (subject: `New Lead: {business} — {trade}`). The email's `Reply-To`
+   is set to the submitter's address, so replying goes straight to the lead.
+   The notification includes all form fields plus a submission timestamp.
 3. On success → **302 redirect to `/thank-you.html`**. On error → 500 JSON.
 4. CORS is open (`*`); only `POST`/`OPTIONS` accepted.
 
 **Required environment variables:**
-- `GMAIL_USER` — the Gmail address used to send.
+- `GMAIL_USER` — the Gmail address used to send (appears in `From`).
 - `GMAIL_APP_PASSWORD` — a Gmail App Password (not the account password).
+- `LEAD_TO_EMAIL` — where lead notifications are delivered (optional;
+  defaults to `snket.desai@easylocalboostlabs.com` if unset). This is an
+  internal routing address only and is **not** shown anywhere on the site.
 
 ---
 
@@ -253,8 +259,9 @@ Vanilla JS, IIFE-wrapped, initialized on `DOMContentLoaded`:
 
 - **Model:** Static files from repo root + serverless function in `/api`
   (Vercel-style). Form action is `/api/contact`.
-- **Env vars** (`GMAIL_USER`, `GMAIL_APP_PASSWORD`) must be set in the hosting
-  platform for the contact form to work.
+- **Env vars** (`GMAIL_USER`, `GMAIL_APP_PASSWORD`, and optionally
+  `LEAD_TO_EMAIL`) must be set in the hosting platform for the contact form
+  to work.
 - **Install:** `npm install` (pulls `nodemailer`). No build step for the static site.
 
 ---
