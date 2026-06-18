@@ -19,7 +19,7 @@ their new website**.
   serverless function for form handling.
 - **Primary conversion goal:** Lead-form submissions → email to the business →
   redirect to `thank-you.html`.
-- **Offer:** **$1,500 one-time build + $99/month hosting & care.** No long-term
+- **Offer:** **$750 one-time build + $99/month hosting & care.** No long-term
   contracts, cancel anytime, client owns their site, live in 1–2 weeks.
 - **Positioning:** Direct-response, contractor-to-contractor. Sells a website
   that *books jobs* — built fast with AI, refined and backed by humans.
@@ -44,7 +44,7 @@ general contractors, roofing/siding/window contractors, landscapers &
 hardscapers, solar installers, HVAC contractors.
 
 **Core value proposition:** *"Get a professional website that books jobs —
-built by AI, backed by humans. $1,500 to build, $99/month to host and
+built by AI, backed by humans. $750 to build, $99/month to host and
 maintain. No contracts."*
 
 **Real proof / portfolio sites** (reference only — do not attach fabricated
@@ -91,7 +91,7 @@ Browser ──► static HTML/CSS/JS (served from repo root)
 | `services.html` | Services overview / hub page |
 | `contact.html` | Contact page with lead form |
 | `thank-you.html` | Post-submission confirmation page (noindex) |
-| `website-design.html` | Service — AI website design ($1,500 build) |
+| `website-design.html` | Service — AI website design ($750 build) |
 | `google-business-profile.html` | Service — Google Business Profile optimization |
 | `local-landing-pages.html` | Service — city-specific local landing pages |
 | `hosting-and-care.html` | Service — $99/mo hosting & care |
@@ -127,7 +127,7 @@ Titles/H1s are keyword-front-loaded. Primary CTA everywhere is
 - **`contact.html`** — Title: "Contact Us | AI Websites for Contractors | Local Boost Labs"; H1: "Let's Talk About Your New Contractor Website".
 
 ### Services
-- **`website-design.html`** — "AI Website Design for Contractors | $1,500 Custom Sites | Local Boost Labs" / "Professional Contractor Websites—Built Fast, Priced Fair" / contractor website design.
+- **`website-design.html`** — "AI Website Design for Contractors | $750 Custom Sites | Local Boost Labs" / "Professional Contractor Websites—Built Fast, Priced Fair" / contractor website design.
 - **`google-business-profile.html`** — "Google Business Profile Optimization for Contractors | Local Boost Labs" / "Get Found on Google Maps—We Optimize Your Business Profile" / Google Business Profile for contractors.
 - **`local-landing-pages.html`** — "Local Landing Pages for Contractors | Rank in Every City You Serve" / "City-Specific Landing Pages That Rank and Convert" / local landing pages contractors.
 - **`hosting-and-care.html`** — "$99/Month Hosting & Website Care for Contractors | Local Boost Labs" / "Hosting, Updates & Support—So You Can Focus on Jobs" / contractor website hosting.
@@ -155,7 +155,7 @@ ranks first on Google.
 **Core principles:**
 1. **Sell booked jobs, not "a website."** Lead with the outcome: more calls,
    more booked projects, getting found on Google.
-2. **Concrete, honest offer.** "$1,500 to build, $99/month to host. No
+2. **Concrete, honest offer.** "$750 to build, $99/month to host. No
    contracts. Cancel anytime. You own your site. Live in 1–2 weeks."
 3. **AI speed + human trust.** Built fast with AI, reviewed/refined by real
    people who answer when you call.
@@ -180,7 +180,7 @@ industries grid, what's-included ($99/mo), trust stats, FAQ, final CTA.
 - **`robots` meta:** `index, follow` on indexable pages; `noindex, nofollow` on
   `thank-you.html`.
 - **Structured data (JSON-LD):**
-  - `ProfessionalService` + `Offer` (build $1,500 / hosting $99) on homepage
+  - `ProfessionalService` + `Offer` (build $750 / hosting $99) on homepage
   - `Service` schema on service & industry pages
   - `Organization` / `AboutPage` on About
   - `FAQPage` schema on pages with FAQs
@@ -309,7 +309,7 @@ compatible runtime (e.g. `vercel dev`) with the Gmail env vars set.
 - **Local landing page** — a city/service-specific page built to rank for "[service]
   in [city]" searches.
 - **Hosting & Care ($99/mo)** — ongoing hosting, security, backups, updates, minor
-  edits, and support after the one-time $1,500 build.
+  edits, and support after the one-time $750 build.
 
 ---
 
