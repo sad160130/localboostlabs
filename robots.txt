@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block the thank-you confirmation page from indexing
+Disallow: /thank-you.html
+
+Sitemap: https://www.localboostlabs.com/sitemap.xml

@@ -8,17 +8,21 @@
 
 ## 1. Project Overview
 
-**Local Boost Labs** is a marketing website for a Local SEO agency that works
-**exclusively with HVAC (heating & cooling) contractors**. The site's job is to
-generate qualified leads — HVAC business owners who book a "15-Minute Job
-Pipeline Call."
+**Local Boost Labs** is a marketing website for a business that sells
+**AI-built websites + $99/month hosting & care to skilled-trade businesses**
+(kitchen & bath remodelers, home builders, roofing/siding/window contractors,
+landscapers, solar installers, and HVAC contractors). The site's job is to
+generate qualified leads — trade business owners who request a **free demo of
+their new website**.
 
 - **Type:** Static marketing website (multi-page HTML/CSS/JS) with a single
   serverless function for form handling.
-- **Primary conversion goal:** Lead-form submissions → email to the agency →
+- **Primary conversion goal:** Lead-form submissions → email to the business →
   redirect to `thank-you.html`.
-- **Positioning:** Direct-response, outcome-focused. The site sells *jobs*
-  (AC installs, system replacements) — not "SEO services" or vanity metrics.
+- **Offer:** **$1,500 one-time build + $99/month hosting & care.** No long-term
+  contracts, cancel anytime, client owns their site, live in 1–2 weeks.
+- **Positioning:** Direct-response, contractor-to-contractor. Sells a website
+  that *books jobs* — built fast with AI, refined and backed by humans.
 - **Production domain:** `https://www.localboostlabs.com`
 
 ---
@@ -28,25 +32,30 @@ Pipeline Call."
 | Field | Value |
 |-------|-------|
 | Business name | Local Boost Labs |
-| Industry niche | Local SEO for HVAC contractors (HVAC-only) |
+| What it sells | AI-built websites + $99/mo hosting & care for skilled trades |
 | Phone | **(502) 530-9330** |
 | Email | info@localboostlabs.com |
-| Address (schema) | 123 Main Street, Lancaster, SC 29720 |
-| HQ reference (About) | Charlotte Metro Area |
-| Founded | November 2025 |
-| Founder & CEO | Matt Heinecke |
-| Lead SEO Director | Snket Desai |
+| Address | 5508 Soft Shell Drive, Lancaster, SC 29720 |
+| Founder | Matt Heinecke |
+| Technical / SEO | Sanket Desai |
 
-**Service areas (primary):** Lancaster SC (home base), Indian Land SC, Fort Mill
-SC, Rock Hill SC — all in the Lancaster County / Charlotte metro region.
+**Target industries:** Kitchen & bath remodelers (primary), home builders /
+general contractors, roofing/siding/window contractors, landscapers &
+hardscapers, solar installers, HVAC contractors.
 
-**Core value proposition:** *"We help HVAC contractors in Lancaster County add
-10-15+ high-profit AC installs and system replacements to their schedule every
-month — starting in 90 days."*
+**Core value proposition:** *"Get a professional website that books jobs —
+built by AI, backed by humans. $1,500 to build, $99/month to host and
+maintain. No contracts."*
 
-> **Naming note:** The site uses the spelling "Snket Desai." The owner's email
-> (sanketdesai1989@gmail.com) and personal site suggest "Sanket." Left as-is on
-> the site; confirm preferred spelling before publishing widely.
+**Real proof / portfolio sites** (reference only — do not attach fabricated
+metrics): `alliedhomecontractors.com`, `primehomehvac.com`,
+`eatrealfoodnyc.com`.
+
+> **Trust guardrails (important):** Do **not** fabricate testimonials, client
+> names, review counts/star ratings, "number of sites built," or performance
+> guarantees anywhere on the site. Results claims stay general ("designed to
+> convert," "built to book jobs"). Industry statistics may be used only with a
+> cited source.
 
 ---
 
@@ -77,145 +86,116 @@ Browser ──► static HTML/CSS/JS (served from repo root)
 | File | Purpose |
 |------|---------|
 | `index.html` | Homepage |
+| `about.html` | About / founders / why |
+| `portfolio.html` | Portfolio of websites built |
 | `services.html` | Services overview / hub page |
-| `local-seo.html` | Service page — Local SEO (flagship) |
-| `google-business-profile-optimization.html` | Service page — GBP optimization |
-| `citation-building.html` | Service page — Citation building |
-| `local-landing-pages.html` | Service page — Local landing pages |
-| `reputation-management.html` | Service page — Reputation management |
-| `lancaster-sc.html` | Service-area page — Lancaster, SC |
-| `indian-land-sc.html` | Service-area page — Indian Land, SC |
-| `fort-mill-sc.html` | Service-area page — Fort Mill, SC |
-| `rock-hill-sc.html` | Service-area page — Rock Hill, SC |
-| `about.html` | About / team / founders |
 | `contact.html` | Contact page with lead form |
-| `thank-you.html` | Post-submission confirmation page |
+| `thank-you.html` | Post-submission confirmation page (noindex) |
+| `website-design.html` | Service — AI website design ($1,500 build) |
+| `google-business-profile.html` | Service — Google Business Profile optimization |
+| `local-landing-pages.html` | Service — city-specific local landing pages |
+| `hosting-and-care.html` | Service — $99/mo hosting & care |
+| `reputation-reviews.html` | Service — reputation & review management |
+| `remodeler-websites.html` | Industry — kitchen & bath remodelers |
+| `home-builder-websites.html` | Industry — home builders / GCs |
+| `roofing-siding-window-websites.html` | Industry — roofing/siding/windows |
+| `landscaping-hardscaping-websites.html` | Industry — landscaping/hardscaping |
+| `solar-websites.html` | Industry — solar installers |
+| `hvac-websites.html` | Industry — HVAC contractors |
 | `privacy-policy.html` | Privacy policy (legal) |
 | `terms-of-service.html` | Terms of service (legal) |
 | `styles.css` | Global stylesheet (all pages) |
 | `main.js` | Global JS (nav, forms, FAQ, smooth scroll) |
 | `api/contact.js` | Serverless lead-email handler |
-| `sitemap.xml` | XML sitemap (16 URLs) |
+| `sitemap.xml` | XML sitemap (18 URLs) |
+| `robots.txt` | Allows all, disallows thank-you, points to sitemap |
 | `package.json` | Node manifest (nodemailer dependency) |
-| `images/.gitkeep` | Placeholder for an (currently empty) images dir |
+| `images/` | Image assets directory |
 
 ---
 
-## 5. Page Inventory — Titles, H1s, Meta Descriptions, Target Keywords
+## 5. Page Inventory — Titles, H1s, Target Keywords
 
-All Titles and H1s are **keyword-front-loaded** for SEO while preserving the
-job-focused angle. Title pattern: `[Primary Keyword] in [City] | [Benefit] | Local Boost Labs`.
+Titles/H1s are keyword-front-loaded. Primary CTA everywhere is
+**"See a Free Demo of Your New Site."**
 
-### Homepage — `index.html`
-- **Title:** HVAC Local SEO in Lancaster SC | More AC Installs & System Replacements | Local Boost Labs
-- **H1:** Local SEO for HVAC Contractors: Add 10-15 High-Profit AC Installs Every Month, Starting in 90 Days or Less
-- **Target keywords:** HVAC local SEO, Local SEO for HVAC contractors, Lancaster SC
-- **Meta:** "We help HVAC contractors in Lancaster County add 10-15+ high-profit AC installs and system replacements per month—starting in 90 days…"
+### Core
+- **`index.html`** — Title: "AI-Built Websites for Remodelers & Contractors | Local Boost Labs"; H1: "Get a Professional Website That Books Jobs—Built by AI, Backed by Humans"; keyword: contractor website design.
+- **`about.html`** — Title: "About Local Boost Labs | AI Website Agency for Skilled Trades"; H1: "We Build Websites That Book Jobs for Contractors Like You".
+- **`portfolio.html`** — Title: "Our Work | Contractor Website Examples | Local Boost Labs"; H1: "Websites We've Built for Contractors & Remodelers".
+- **`services.html`** — Title: "Our Services | Websites, Hosting & SEO for Contractors | Local Boost Labs"; H1: "Everything You Need to Get Found and Book More Jobs".
+- **`contact.html`** — Title: "Contact Us | AI Websites for Contractors | Local Boost Labs"; H1: "Let's Talk About Your New Contractor Website".
 
-### Local SEO — `local-seo.html`
-- **Title:** Local SEO for HVAC Companies in Lancaster SC | More AC Installs | Local Boost Labs
-- **H1:** Local SEO for HVAC Companies: Add 10-15+ AC Installs & System Replacements Every Month
-- **Target keywords:** Local SEO for HVAC companies, HVAC SEO Lancaster SC
+### Services
+- **`website-design.html`** — "AI Website Design for Contractors | $1,500 Custom Sites | Local Boost Labs" / "Professional Contractor Websites—Built Fast, Priced Fair" / contractor website design.
+- **`google-business-profile.html`** — "Google Business Profile Optimization for Contractors | Local Boost Labs" / "Get Found on Google Maps—We Optimize Your Business Profile" / Google Business Profile for contractors.
+- **`local-landing-pages.html`** — "Local Landing Pages for Contractors | Rank in Every City You Serve" / "City-Specific Landing Pages That Rank and Convert" / local landing pages contractors.
+- **`hosting-and-care.html`** — "$99/Month Hosting & Website Care for Contractors | Local Boost Labs" / "Hosting, Updates & Support—So You Can Focus on Jobs" / contractor website hosting.
+- **`reputation-reviews.html`** — "Reputation & Review Management for Contractors | Local Boost Labs" / "Turn Happy Customers Into 5-Star Reviews" / contractor review management.
 
-### Google Business Profile — `google-business-profile-optimization.html`
-- **Title:** Google Business Profile Optimization for HVAC Companies in Lancaster SC | Local Boost Labs
-- **H1:** Google Business Profile Optimization for HVAC: Show Up First When Homeowners Need Help
-- **Target keywords:** Google Business Profile optimization for HVAC, Map Pack
+### Industries
+- **`remodeler-websites.html`** — "Websites for Kitchen & Bath Remodelers | Local Boost Labs" / "Kitchen & Bath Remodeler Websites That Book More Projects" / kitchen remodeler website.
+- **`home-builder-websites.html`** — "Websites for Home Builders & General Contractors | Local Boost Labs" / "Custom Home Builder Websites That Showcase Your Craftsmanship" / home builder website design.
+- **`roofing-siding-window-websites.html`** — "Websites for Roofing, Siding & Window Contractors | Local Boost Labs" / "Roofing & Exterior Contractor Websites That Generate Leads" / roofing contractor website.
+- **`landscaping-hardscaping-websites.html`** — "Websites for Landscapers & Hardscape Contractors | Local Boost Labs" / "Landscaping Websites That Turn Browsers Into Buyers" / landscaper website design.
+- **`solar-websites.html`** — "Websites for Solar Installers & Energy Contractors | Local Boost Labs" / "Solar Company Websites That Convert Homeowners" / solar company website.
+- **`hvac-websites.html`** — "Websites for HVAC Contractors | Local Boost Labs" / "HVAC Contractor Websites That Book Service Calls" / HVAC contractor website.
 
-### Citation Building — `citation-building.html`
-- **Title:** Citation Building for HVAC Companies | NAP Consistency & Listings | Local Boost Labs
-- **H1:** Citation Building for HVAC Contractors: Get Found Everywhere Homeowners Search
-- **Target keywords:** Citation building for HVAC, NAP consistency
-
-### Local Landing Pages — `local-landing-pages.html`
-- **Title:** Local Landing Pages for HVAC Companies | City-Specific SEO | Local Boost Labs
-- **H1:** Local Landing Pages for HVAC Contractors: Get AC Installs from Every City You Serve
-- **Target keywords:** Local landing pages for HVAC, city-specific SEO
-
-### Reputation Management — `reputation-management.html`
-- **Title:** Reputation Management for HVAC Companies | 5-Star Google Reviews | Local Boost Labs
-- **H1:** Reputation Management for HVAC Contractors: Win More Jobs with 5-Star Reviews
-- **Target keywords:** Reputation management for HVAC, Google reviews
-
-### Lancaster, SC — `lancaster-sc.html`
-- **Title:** HVAC SEO in Lancaster SC | Local SEO for HVAC Contractors | Local Boost Labs
-- **H1:** HVAC Local SEO in Lancaster, SC: More AC Installs & System Replacements
-
-### Indian Land, SC — `indian-land-sc.html`
-- **Title:** HVAC SEO in Indian Land SC | Local SEO for HVAC Contractors | Local Boost Labs
-- **H1:** HVAC Local SEO in Indian Land, SC: More AC Installs from a Booming Market
-
-### Fort Mill, SC — `fort-mill-sc.html`
-- **Title:** HVAC SEO in Fort Mill SC | Local SEO for HVAC Contractors | Local Boost Labs
-- **H1:** HVAC Local SEO in Fort Mill, SC: More High-Profit AC Installs & Replacements
-
-### Rock Hill, SC — `rock-hill-sc.html`
-- **Title:** HVAC SEO in Rock Hill SC | Local SEO for HVAC Contractors | Local Boost Labs
-- **H1:** HVAC Local SEO in Rock Hill, SC: More AC Installs in York County
-
-### Supporting pages
-- **`services.html`** — Title: "Local SEO Services That Get HVAC Contractors More Jobs | Local Boost Labs"; H1: "Local SEO Services That Fill Your Schedule with High-Profit HVAC Jobs"
-- **`about.html`** — Title: "About Local Boost Labs | We Get HVAC Contractors More Jobs | Meet Our Team"; H1: "We Exist to Get You More HVAC Jobs"
-- **`contact.html`** — Title: "Contact Us | Local Boost Labs - Free HVAC SEO Audit"; H1: "Contact Local Boost Labs"
-- **`thank-you.html`**, **`privacy-policy.html`**, **`terms-of-service.html`** — utility/legal pages.
+### Utility / legal
+- **`thank-you.html`** (noindex), **`privacy-policy.html`**, **`terms-of-service.html`**.
 
 ---
 
 ## 6. Content & Copywriting Strategy
 
-The site follows a **direct-response, job-focused** philosophy. Every page is
-written to a skeptical HVAC business owner who has "been burned before."
+Direct-response, plain-spoken, **contractor-to-contractor** voice written to a
+trade business owner who is great at their craft but losing jobs to whoever
+ranks first on Google.
 
 **Core principles:**
-1. **Sell jobs and profit, not "SEO."** Lead with AC installs, system
-   replacements, and dollars ($5,000–$15,000+ jobs; $1,500–$4,000+ profit each).
-2. **Specific offers.** "10-15+ more jobs in 90 days," not "improve your rankings."
-3. **Address skepticism head-on.** FAQ and body copy answer "I've been burned by
-   agencies before," "real talk, not agency BS," and "no long-term contracts."
-4. **Proof in advance.** "We'll show you results before you commit."
-5. **ROI math.** Pages spell out the profit-per-job math to make the cost a
-   no-brainer.
-6. **Low-friction CTA.** Primary CTA everywhere is **"Book a Job Pipeline Call"** /
-   **"Book My 15-Minute Call."**
+1. **Sell booked jobs, not "a website."** Lead with the outcome: more calls,
+   more booked projects, getting found on Google.
+2. **Concrete, honest offer.** "$1,500 to build, $99/month to host. No
+   contracts. Cancel anytime. You own your site. Live in 1–2 weeks."
+3. **AI speed + human trust.** Built fast with AI, reviewed/refined by real
+   people who answer when you call.
+4. **Low-risk CTA.** Everything points to a **free demo** of the prospect's own
+   site — no cost, no credit card, no obligation.
+5. **No fabrication.** See trust guardrails in §2.
 
-**Recurring section types:** job-focused hero, skepticism-busting section,
-process/"how we get you jobs," proof-in-advance, ROI math, services grid,
-"why this is different," service-area cards, promise/commitment, FAQ, final CTA.
+**Recurring section types:** outcome-focused hero with lead form, problem/agitate,
+solution (AI + human), how-it-works (demo → refine → launch), portfolio/proof,
+industries grid, what's-included ($99/mo), trust stats, FAQ, final CTA.
 
-**Voice:** Plain-spoken, confident, contractor-to-contractor. Avoids jargon
-("impressions," "organic traffic") in favor of "jobs booked," "phone ringing."
+**Primary CTA copy:** "See a Free Demo of Your New Site" (buttons may shorten to
+"See a Free Demo").
 
 ---
 
 ## 7. SEO Implementation
 
-- **Titles & H1s:** Keyword-front-loaded (see §5). One unique title per page
-  (a previous duplicate between `index.html` and `local-seo.html` was fixed).
-- **Meta descriptions:** Unique, benefit-driven, keyword-bearing on every page.
-- **Canonical tags:** `<link rel="canonical">` on each page pointing to the
-  `www.localboostlabs.com` URL.
-- **`robots` meta:** `index, follow` on indexable pages.
-- **Structured data (JSON-LD):** Present and varied by page type:
-  - `Service` schema on service pages
-  - `LocalBusiness` schema on service-area pages (with `areaServed` City)
-  - `Organization`, `AboutPage`, and `Person` schema (founders) on About
+- **Titles & H1s:** Keyword-front-loaded, one unique title per page (see §5).
+- **Meta descriptions:** Unique, benefit-driven, keyword-bearing per page.
+- **Canonical tags:** `<link rel="canonical">` per page → `www.localboostlabs.com` URL.
+- **`robots` meta:** `index, follow` on indexable pages; `noindex, nofollow` on
+  `thank-you.html`.
+- **Structured data (JSON-LD):**
+  - `ProfessionalService` + `Offer` (build $1,500 / hosting $99) on homepage
+  - `Service` schema on service & industry pages
+  - `Organization` / `AboutPage` on About
   - `FAQPage` schema on pages with FAQs
-  - `BreadcrumbList` schema across content pages
-- **Sitemap:** `sitemap.xml` lists 16 URLs with `lastmod`, `changefreq`,
-  `priority` (homepage 1.0; services 0.9; locations 0.8; legal 0.3).
-- **Internal linking:** Service pages cross-link to related services and to
-  service-area pages, and vice versa.
-- **NAP consistency:** Phone (502) 530-9330 and address appear in footer +
-  schema on every page — important for local SEO.
-
-> **No `robots.txt` is currently in the repo.** Consider adding one that points
-> to the sitemap.
+  - `BreadcrumbList` across content pages
+- **Sitemap:** `sitemap.xml` lists 18 URLs (homepage 1.0; services 0.9;
+  industries 0.8; legal 0.3).
+- **`robots.txt`:** Present — allows all, disallows `/thank-you.html`, references
+  the sitemap.
+- **Internal linking:** Services ↔ industries ↔ homepage cross-link heavily.
+- **NAP consistency:** 5508 Soft Shell Drive, Lancaster, SC 29720 +
+  (502) 530-9330 + info@localboostlabs.com in footer/schema on every page.
 
 ---
 
 ## 8. Design System
-
-Defined via CSS custom properties (in each page's critical CSS and `styles.css`):
 
 | Token | Value | Use |
 |-------|-------|-----|
@@ -225,51 +205,43 @@ Defined via CSS custom properties (in each page's critical CSS and `styles.css`)
 | `--text-white` / `--bg-white` | `#fff` | Inverse text / backgrounds |
 | Success green | `#10b981` | Checkmarks, positive states |
 
-- **Typography:** System font stack (`-apple-system, BlinkMacSystemFont,
-  'Segoe UI', Roboto, sans-serif`) — fast, no web-font load.
-- **Reusable components (CSS classes):** `.header` / `.nav-menu` /
-  `.nav-dropdown`, `.btn` (`.btn-primary`, `.btn-outline`), `.hero` /
-  `.service-hero` / `.city-hero`, `.hero-badge`, `.hero-benefits`,
-  `.trust-badges`, `.lead-form-wrapper` + `.lead-form`, `.section` /
-  `.section-light`, `.section-header`, `.content-section`, `.features-list`,
-  `.process-detailed`, `.services-grid` / `.service-card`, `.cities-grid` /
-  `.city-card`, `.stats-highlight` / `.stat-box`, `.testimonials-grid` /
-  `.testimonial-card`, `.faq-list` / `.faq-item`, `.cta-section`, `.footer`.
-- **Decorative SVG:** Inline HVAC-themed SVG icons in hero decorations; the GBP
-  page includes an elaborate before/after "geo-grid" Map Pack ranking visual.
-- **Responsive:** Mobile breakpoint at `768px` (drives the mobile nav + dropdowns).
+- **Typography:** System font stack — fast, no web-font load.
+- **Reusable components (CSS classes):** `.header`/`.nav-menu`/`.nav-dropdown`,
+  `.btn` (`.btn-primary`,`.btn-outline`), `.hero`/`.page-hero`, `.hero-badge`,
+  `.hero-benefits`, `.trust-badges`, `.lead-form-wrapper`+`.lead-form`,
+  `.section`/`.section-light`, `.section-header`, `.content-section`,
+  `.features-list`, `.process-detailed`, `.services-grid`/`.service-card`,
+  `.cities-grid`/`.city-card` (reused for industries), `.stats-section`,
+  `.faq-list`/`.faq-item`, `.cta-section`, `.footer`.
+- **Responsive:** Mobile breakpoint at `768px` (mobile nav + dropdowns).
 
 ---
 
 ## 9. JavaScript (`main.js`)
 
-Vanilla JS, IIFE-wrapped, initialized on `DOMContentLoaded`. Modules:
+Vanilla JS, IIFE-wrapped, initialized on `DOMContentLoaded`:
 
-- `initStickyHeader()` — adds `.scrolled` class to header past 100px scroll.
-- `initMobileMenu()` — hamburger toggle; closes on outside click / link click.
+- `initStickyHeader()` — `.scrolled` class past 100px.
+- `initMobileMenu()` — hamburger toggle; closes on outside/link click.
 - `initDropdowns()` — tap-to-open nav dropdowns on mobile (≤768px).
-- `initFormValidation()` — client-side validation (required, email regex, phone
-  regex ≥10 digits) with inline error UI; submits to `/api/contact` when valid.
-- `initSmoothScroll()` — smooth-scrolls anchor links, offsetting header height.
+- `initFormValidation()` — client-side validation; submits to `/api/contact`.
+- `initSmoothScroll()` — anchor smooth scroll with header offset.
 - `initFAQ()` — accordion (one open at a time).
-- `window.scrollToForm()` — global helper used by hero/CTA buttons to scroll to
-  the lead form.
-
-> Note: `showFormSuccess()` exists as an in-page success fallback but the live
-> flow actually submits the form and redirects to `thank-you.html`.
+- `window.scrollToForm()` — global helper for hero/CTA buttons.
 
 ---
 
 ## 10. Lead Capture & Email Flow (`api/contact.js`)
 
 1. Lead forms POST to `/api/contact` with: `name`, `email`, `phone`,
-   `business`, `city`, `description`, and a hidden `source` (identifies which
-   page/form the lead came from).
+   `business`, `trade` (select), `website` (current site, optional),
+   `description`, and a hidden `source` (identifies the originating page).
+   *(Legacy `city` field still accepted for backward compatibility.)*
 2. The handler validates env vars, creates a Nodemailer Gmail transport,
    verifies the connection, and sends a styled HTML email to
-   **info@localboostlabs.com** (subject: `New Lead: {business} - {city}`).
+   **info@localboostlabs.com** (subject: `New Lead: {business} - {trade}`).
 3. On success → **302 redirect to `/thank-you.html`**. On error → 500 JSON.
-4. CORS is open (`*`) and only `POST`/`OPTIONS` are accepted.
+4. CORS is open (`*`); only `POST`/`OPTIONS` accepted.
 
 **Required environment variables:**
 - `GMAIL_USER` — the Gmail address used to send.
@@ -279,74 +251,65 @@ Vanilla JS, IIFE-wrapped, initialized on `DOMContentLoaded`. Modules:
 
 ## 11. Deployment & Environment
 
-- **Model:** Static files served from the repo root + a serverless function in
-  `/api` (Vercel-style convention). The form action is `/api/contact`.
+- **Model:** Static files from repo root + serverless function in `/api`
+  (Vercel-style). Form action is `/api/contact`.
 - **Env vars** (`GMAIL_USER`, `GMAIL_APP_PASSWORD`) must be set in the hosting
-  platform's project settings for the contact form to work.
-- **Install:** `npm install` (pulls `nodemailer`).
-- No build command is required for the static site.
+  platform for the contact form to work.
+- **Install:** `npm install` (pulls `nodemailer`). No build step for the static site.
 
 ---
 
 ## 12. Local Development
 
-Because it's static HTML, you can preview most of the site with any static
-server from the project root, e.g.:
-
 ```bash
 # Python
-python3 -m http.server 8000
-# then open http://localhost:8000
-
+python3 -m http.server 8000   # http://localhost:8000
 # or Node
 npx serve .
 ```
 
-The **contact form won't send email locally** unless you run the `/api/contact`
-function in a compatible runtime (e.g. `vercel dev`) with the Gmail env vars set.
+The contact form won't send email locally unless you run `/api/contact` in a
+compatible runtime (e.g. `vercel dev`) with the Gmail env vars set.
 
 ---
 
 ## 13. How to Add a New Page (checklist)
 
-1. Duplicate the closest existing page (service vs. service-area template).
+1. Duplicate the closest existing page (service vs. industry template).
 2. Update `<title>`, `<h1>`, `<meta name="description">` — keyword-front-loaded.
 3. Update the `<link rel="canonical">` URL.
-4. Update/refresh the JSON-LD blocks (Service or LocalBusiness, FAQ, Breadcrumb).
-5. Rewrite body copy in the job-focused voice (see §6).
-6. Keep NAP consistent: phone **(502) 530-9330**, address, email in footer.
-7. Add the URL to `sitemap.xml` with an appropriate `priority`/`changefreq`.
-8. Add internal links to/from related service and service-area pages + nav/footer.
-9. Verify the lead form's hidden `source` field is set to the new page name.
+4. Refresh JSON-LD blocks (Service, FAQ, Breadcrumb).
+5. Write body copy in the contractor-to-contractor voice (§6); respect the
+   trust guardrails (§2) — no fabricated proof.
+6. Keep NAP consistent: 5508 Soft Shell Drive, Lancaster, SC 29720 /
+   (502) 530-9330 / info@localboostlabs.com.
+7. Add the URL to `sitemap.xml`.
+8. Add internal links + nav/footer entries.
+9. Set the lead form's hidden `source` to the new page name.
 
 ---
 
 ## 14. Known Issues / Suggested TODOs
 
-- **No `robots.txt`** in the repo — add one referencing the sitemap.
-- **`images/` is empty** (`.gitkeep` only). Founder photos load from Google
-  Drive thumbnail URLs in `about.html` — consider self-hosting for reliability.
-- **`main.js` fallback success copy** still references "Local SEO experts will
-  contact you within 24 hours… SEO strategy" — slightly off-brand vs. the
-  job-focused voice (low priority; not user-visible in normal flow).
-- **Name spelling:** confirm "Snket" vs. "Sanket" Desai.
-- **Placeholder address:** "123 Main Street, Lancaster, SC 29720" appears to be
-  a placeholder — replace with the real business address before launch.
-- Sitemap `lastmod` dates are 2025-11-27 — refresh when pages change materially.
+- **`images/` assets:** Add real project/portfolio imagery and founder photos
+  for stronger conversion; current pages rely on inline SVG iconography.
+- **Portfolio proof:** Only three real sites are referenced. Add more as they
+  ship — with honest descriptions, no fabricated metrics.
+- **Social links** in the footer are placeholders (`#`) — point to real profiles.
 
 ---
 
 ## 15. Glossary
 
-- **Map Pack / Local 3-Pack** — the 3 local businesses shown with a map at the
-  top of Google local search results; the highest-value placement for HVAC.
-- **GBP (Google Business Profile)** — formerly Google My Business; the free
-  Google listing that drives Map Pack visibility and click-to-call.
+- **GBP (Google Business Profile)** — the free Google listing that drives Google
+  Maps / local "Map Pack" visibility and click-to-call.
+- **Map Pack / Local 3-Pack** — the 3 local businesses shown with a map atop
+  Google local results; the highest-value local placement.
 - **NAP** — Name, Address, Phone; must be consistent across the web for local SEO.
-- **Citation** — any online listing/mention of the business's NAP (Yelp, Angi,
-  HomeAdvisor, directories, etc.).
-- **Job Pipeline Call** — the site's low-friction CTA: a free 15-minute call to
-  map out how to get the contractor more high-value jobs.
+- **Local landing page** — a city/service-specific page built to rank for "[service]
+  in [city]" searches.
+- **Hosting & Care ($99/mo)** — ongoing hosting, security, backups, updates, minor
+  edits, and support after the one-time $1,500 build.
 
 ---
 

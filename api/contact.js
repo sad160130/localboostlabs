@@ -21,9 +21,12 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, business, city, description, source } = req.body || {};
+    const { name, email, phone, business, city, trade, website, description, source } = req.body || {};
 
-    console.log('Received form submission:', { name, email, phone, business, city, source });
+    // "trade" is the new field; fall back to legacy "city" if present
+    const tradeOrCity = trade || city;
+
+    console.log('Received form submission:', { name, email, phone, business, trade: tradeOrCity, website, source });
 
     // Create transporter using Gmail SMTP
     const transporter = nodemailer.createTransport({
@@ -53,7 +56,7 @@ module.exports = async function handler(req, res) {
     const mailOptions = {
       from: process.env.GMAIL_USER,
       to: 'info@localboostlabs.com',
-      subject: `New Lead: ${business || name || 'Website Inquiry'} - ${city || 'Local Boost Labs'}`,
+      subject: `New Lead: ${business || name || 'Website Inquiry'} - ${tradeOrCity || 'Local Boost Labs'}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -123,8 +126,14 @@ module.exports = async function handler(req, res) {
                         </tr>
                         <tr>
                           <td style="padding: 12px 0; border-bottom: 1px solid #f3f4f6;">
-                            <span style="color: #6b7280; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">City</span><br>
-                            <span style="color: #1f2937; font-size: 16px; font-weight: 500;">${city || 'Not provided'}</span>
+                            <span style="color: #6b7280; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Trade</span><br>
+                            <span style="color: #1f2937; font-size: 16px; font-weight: 500;">${tradeOrCity || 'Not provided'}</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 12px 0; border-bottom: 1px solid #f3f4f6;">
+                            <span style="color: #6b7280; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Current Website</span><br>
+                            <span style="color: #1f2937; font-size: 16px; font-weight: 500;">${website || 'Not provided'}</span>
                           </td>
                         </tr>
                       </table>
