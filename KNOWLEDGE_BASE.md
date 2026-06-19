@@ -34,7 +34,7 @@ their new website**.
 | Business name | Local Boost Labs |
 | What it sells | AI-built websites + $99/mo hosting & care for skilled trades |
 | Phone | **(502) 530-9330** |
-| Email | snket.desai@easylocalboostlabs.com |
+| Email | snketad@gmail.com |
 | Address | 5508 Soft Shell Drive, Lancaster, SC 29720 |
 | Founder | Matt Heinecke |
 | Technical / SEO | Snket Desai |
@@ -191,7 +191,7 @@ industries grid, what's-included ($99/mo), trust stats, FAQ, final CTA.
   the sitemap.
 - **Internal linking:** Services ↔ industries ↔ homepage cross-link heavily.
 - **NAP consistency:** 5508 Soft Shell Drive, Lancaster, SC 29720 +
-  (502) 530-9330 + snket.desai@easylocalboostlabs.com in footer/schema on every page.
+  (502) 530-9330 + snketad@gmail.com in footer/schema on every page.
 
 ---
 
@@ -248,7 +248,7 @@ Vanilla JS, IIFE-wrapped, initialized on `DOMContentLoaded`:
 
 **Required environment variables:**
 - `GMAIL_USER` — the Gmail / Google Workspace address used to send (also the
-  `From` address). Set this to **`snket.desai@easylocalboostlabs.com`** so
+  `From` address). Set this to **`snketad@gmail.com`** so
   notifications send from that mailbox. Must be a Gmail/Workspace account.
 - `GMAIL_APP_PASSWORD` — an App Password generated for the `GMAIL_USER`
   account (not the normal login password). Must belong to the same account
@@ -292,7 +292,7 @@ compatible runtime (e.g. `vercel dev`) with the Gmail env vars set.
 5. Write body copy in the contractor-to-contractor voice (§6); respect the
    trust guardrails (§2) — no fabricated proof.
 6. Keep NAP consistent: 5508 Soft Shell Drive, Lancaster, SC 29720 /
-   (502) 530-9330 / snket.desai@easylocalboostlabs.com.
+   (502) 530-9330 / snketad@gmail.com.
 7. Add the URL to `sitemap.xml`.
 8. Add internal links + nav/footer entries.
 9. Set the lead form's hidden `source` to the new page name.
