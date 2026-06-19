@@ -254,7 +254,7 @@ Vanilla JS, IIFE-wrapped, initialized on `DOMContentLoaded`:
   account (not the normal login password). Must belong to the same account
   set in `GMAIL_USER`.
 - `LEAD_TO_EMAIL` — where lead notifications are delivered (optional;
-  defaults to `snket.desai@easylocalboostlabs.com` if unset).
+  defaults to `snketad@gmail.com` if unset).
 
 ---
 

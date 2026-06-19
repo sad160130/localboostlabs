@@ -27,7 +27,7 @@ module.exports = async function handler(req, res) {
     const tradeOrCity = trade || city;
 
     // Lead-notification recipient (override via env, default to founder inbox)
-    const leadToEmail = process.env.LEAD_TO_EMAIL || 'snket.desai@easylocalboostlabs.com';
+    const leadToEmail = process.env.LEAD_TO_EMAIL || 'snketad@gmail.com';
 
     console.log('Received form submission:', { name, email, phone, business, trade: tradeOrCity, website, source });
 
